@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Table</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/compressed/picker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/compressed/picker.date.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/themes/default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/themes/default.date.css">
+    <style>
+
+        body {
+
+            font-family: sans-serif;
+
+            background-color: whitesmoke;
+
+            padding: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        input, select, button {
+
+            width: 90%;
+
+            padding: 10px;
+
+            margin: 3px 0;
+
+            border-radius: 5px;
+
+            border: 1px solid gray;
+
+        }
+
+        .container {
+
+            max-width: 600px;
+
+            background-color: white;
+
+            margin: auto;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        table {
+
+            border-collapse: collapse;
+
+            width: 100%;
+
+            margin-top: 20px;
+
+            border: 1px solid black;
+
+        }
+
+        th, td {
+
+            border: 1px solid black;
+
+            text-align: center;
+
+            padding: 10px;
+
+        }
+
+        button {
+
+            background-color: blue;
+
+            color: white;
+
+            cursor: pointer;
+
+        }
+         .delete {
+            background-color: red !important;
+            color: white !important;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .edit {
+            background-color: purple !important;
+            color: white !important;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .In-Progress-row {
+            background-color: blue !important;
+            color: white !important;
+        }
+        .Completed-row{
+            background-color: green !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Table</h1>
+    <form id="taskForm">
+        <label for="name"></label>
+        <input type="text" id="name" placeholder="Name" required>
+        <label for="task"></label>
+        <input type="text" id="task" placeholder="Task" required>
+        <label for="comments"></label>
+        <input type="text" id="comments" placeholder="Comments" required>
+        <label for="duedate"></label>
+        <input type="text" id="duedate" class="datepicker" placeholder="Pick a date" required>
+        <label for="status"></label>
+        <select id="status">
+            <option value="Pending">Pending</option>
+            <option value="In-Progress">In-Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <button type="submit">Add Task</button>
+    </form>
+    <div class="table-responsive">
+    <table id="taskTable" class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width: 50%;">
+            <col style="width: 20%;">
+            <col style="width: 20%;">
+            <col style="width: 15%;">
+            <col style="width: 15%;">
+            <col style="width: 15%;">
+        </colgroup>
+        <thead class="text-white" style="background-color: darkkhaki;">
+
+        <tr>
+            <th>Name</th>
+            <th>Task</th>
+            <th>Comments</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.datepicker').pickadate({
+            format: 'mmmm d, yyyy',
+            selectMonths: true,
+            selectYears: 10
+        });
+
+
+        let editingRow = null;
+
+        $("#taskForm").submit(function (event) {
+            event.preventDefault();
+
+            let name = $("#name").val();
+            let task = $("#task").val();
+            let comments = $("#comments").val();
+            let dueDate = $("#duedate").val();
+            let status = $("#status").val();
+
+            if (editingRow) {
+                editingRow.find("td:eq(0)").text(name);
+                editingRow.find("td:eq(1)").text(task);
+                editingRow.find("td:eq(2)").text(comments);
+                editingRow.find("td:eq(3)").text(dueDate);
+                editingRow.find("td:eq(4)").text(status);
+
+                editingRow.removeClass("In-Progress-row Completed-row");
+                if (status === "In-Progress") {
+                    editingRow.addClass("In-Progress-row");
+                } else if (status === "Completed") {
+                    editingRow.addClass("Completed-row");
+                }
+
+                editingRow = null;
+                $("#taskForm button[type=submit]").text("Add Task");
+            } else {
+
+                let newRow = $("<tr></tr>");
+
+                newRow.append(`<td>${name}</td>`);
+                newRow.append(`<td>${task}</td>`);
+                newRow.append(`<td>${comments}</td>`);
+                newRow.append(`<td>${dueDate}</td>`);
+                newRow.append(`<td>${status}</td>`);
+                newRow.append(`
+                <td>
+                   <button class="btn btn-warning btn-sm edit">Edit</button>
+                   <button class="btn btn-danger btn-sm delete">Delete</button>
+                </td>
+            `);
+                if (status === "In-Progress") {
+                    newRow.addClass("In-Progress-row");
+                } else if (status === "Completed") {
+                    newRow.addClass("Completed-row");
+                }
+
+                $("#taskTable tbody").append(newRow);
+            }
+
+            $("#taskForm")[0].reset();
+        });
+
+
+        $("#taskTable").on("click", ".delete", function () {
+            $(this).closest("tr").remove();
+        });
+
+
+        $("#taskTable").on("click", ".edit", function ()
+        {editingRow = $(this).closest("tr");
+
+            $("#name").val(editingRow.find("td:eq(0)").text());
+            $("#task").val(editingRow.find("td:eq(1)").text());
+            $("#comments").val(editingRow.find("td:eq(2)").text());
+            $("#duedate").val(editingRow.find("td:eq(3)").text());
+            $("#status").val(editingRow.find("td:eq(4)").text());
+            $("#taskForm button[type=submit]").text("Update Task");
+        });
+
+    });
+
+</script>
+</body>
+</html>
+

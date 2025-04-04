@@ -1,0 +1,299 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto';
+        }
+       
+        body, html {
+             height: 5%;
+             background-color: white; 
+             color: white;
+        }
+        .outer {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            height: 100vh; 
+            background-color: white; 
+        }
+
+       .inner {
+           width: 80%; 
+           background-color: rgb(6 126 204); 
+           color: white;
+           text-align: center;
+           padding: 20px;
+           border-radius: 2nga0px; 
+       }
+        .container {
+             width: 150%; 
+             background-color:CapriBlue;              
+             padding: 80px;
+             color: white;
+             padding-left:90px;              
+             text-align: center;
+             justify-content: space-between; 
+        }
+                 
+        .profile-container {
+            width: 150%;
+            max-width: 1220px;
+            margin: auto;
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+                     
+        }
+        .profile-image {
+            width: 104%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1; 
+            transform: translateX(15px);
+            transform: translateX(-49px);
+        }
+
+       
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            position: absolute;
+            top: 190px; 
+            left: 10%;
+            transform: translateX(-50%);
+            z-index: 3;         
+       }
+
+        h1 {
+            font-size: 40px;
+            position: absolute;
+            top: 310px;
+            left: 13%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            top: 350px;
+            left: 13%;
+            transform: translateX(-100%);
+            z-index: 4;       
+        }
+        .info-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: rgb(6, 116, 191);
+            padding:1px;
+            margin-top: 0px;
+        }
+
+        .info-box {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: rbga(255,255,255, 0.5);
+            text-align:left;
+        }
+
+        .info-box strong {
+           font-size: 20px;
+           font-weight:100;
+           text-transform: uppercase;
+           color: white;
+           background-color:rbga(255,255,255, 0.5);
+           text-align:left;
+           margin-right:11px;
+          
+       }
+
+      .info-box p1 {
+          font-size: 20px;
+          font-weight: 400;
+           
+            position: relative;
+            z-index: 2;
+            margin-right:20px; 
+            border-left:5px solid rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            text-align:left;
+        
+       } 
+  h2 {
+            margin-top: 0.5px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 28px;
+            text-align: left;
+
+            padding-right: 15px; 
+            position: relative;
+            z-index: 2;
+            background-color:rgb(6 116 191);
+            margin-left:-30px;
+       }
+       h3 {
+            margin-top: 30px;
+            font-size: 28px;
+            text-align: left;
+            border-left: 3px solid rgba(255, 255, 255, 0.5); 
+            padding-right: 5px; 
+            position: relative;
+            z-index: 2;
+            margin-left:-20px;
+       }
+
+        h4 {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 9px;
+            position: relative;
+            z-index: 2;
+            margin-left:0px;
+            text-align:left;
+            
+        }
+        .highlight {
+            font-weight: bold;
+            color: white;  
+}
+
+         h5 {
+        
+            font-size: 35px;
+            font-weight: 700;
+            margin-top: 30px;
+            padding: 50px;
+            padding-right:20px;
+            position: relative;
+            z-index: -5;
+           
+            margin-left:-50px;
+            text-align:left;
+            height: 19vh; 
+          }
+          .quote {
+            font-weight: light;
+            color:rgba(255, 255, 255, 0.5);
+
+              
+}
+
+          }
+
+          @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .profile-container {
+                margin-left: 200px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+                top: 150px; 
+            }
+
+            h4 {
+                font-size: 18px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 150px;
+            }
+
+            .profile-container {
+                margin-left: 150px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+                top: 130px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+           </style>
+</head>
+<body>
+       
+        <div class="outer">
+        <div class="inner">
+        <div class="profile-container">
+        <header>
+            <img src="C:\Users\Sree_Harshini\Desktop\mountains.AVIF" alt="User Profile" class="profile-image">
+            <img src="C:\Users\Sree_Harshini\Desktop\example profile pic.jpg" alt="Portrait of Jonathan Atkinson" class="profile-photo">
+            <h1>Jonathan Atkinson</h1>
+            <p>UX Specialist</p>
+        </header>
+              
+                <h2>At A Glance</h2>
+       <div class="info-container">
+                <div class="info-box">
+                   <h4>FULLNAME</h4>
+                   <p1>Bruce "the bat" Wayne</p1>
+                </div>
+                <div class="info-box">
+                    <h4>BIRTHPLACE</h4>
+                    <p1>Lancashire, England</p1>
+                </div>
+                <div class="info-box">
+                     <h4>BORN</h4>
+                     <p1>1970</p1>
+                </div>
+                <div class="info-box">
+                     <h4>RESIDENCE</h4>
+                     <p1>Mechanicsburg,OH</p1>
+                </div>
+                <div class="info-box">
+                     <h4>EDUCATION</h4>
+                     <p1>BS, MS, MBA</p1>
+                </div>
+                <div class="info-box">
+                     <h4>HOBBIES</h4>
+                     <p1>Television, Movies, Art</p1>
+                </div>
+           </div>
+               <h3>About Me</h3>
+        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, <strong class="highlight">ipsum sed pharetra gravida</strong>, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendumenim nibh eget ipsum.</h4> 
+
+ <h5><strong class="quote">"</strong>I wish to expand my skills on a daily basis with the help of an <br>employee-focused company.<strong class="quote">"</strong></h5>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
