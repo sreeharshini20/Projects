@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mallow landing page</title>
+  <link rel="stylesheet" href="mallowpage.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .dropdown-wrapper {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    min-width: 190px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: #111;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+
+  .dropdown-content a:hover {
+    background-color: blue;
+  }
+
+  .dropdown-wrapper:hover .dropdown-content {
+    display: block;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .logo-text {
+    line-height: 1;
+  }
+
+  .logo-text h1 {
+    font-size: 20px;
+    color: #0047AB;
+    font-weight: 900;
+  }
+
+  .logo-text span {
+    font-size: 10px;
+    color: #00bfff;
+    letter-spacing: 3px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .nav-links a.dropdown::after {
+    content: " ▼";
+    font-size: 10px;
+    color: #999;
+    margin-left: 5px;
+  }
+  .cta-button {
+    background-color: #006aff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #0054cc;
+  }
+  .hero-section {
+    background: url('./assessts/heads-img.jpeg') no-repeat right center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+
+  .content-box {
+    background-color: white;
+    padding: 90px;
+    margin-top: -10px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: #0056ff;
+    color: white;
+    font-size: 20px;
+    padding: 8px 18px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  .heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    color: #222;
+  }
+
+  .cta-buttons {
+    display: inline-block;
+    background-color: #0066ff;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .cta-buttons:hover {
+    background-color: #004dcc;
+  }
+  .scroll-wrapper {
+    width: 90%;
+    overflow: hidden;
+    background: #fff;
+    padding:120px 0;
+    align-items: center;
+  }
+
+  .scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+  }
+
+  .scroll-track img {
+    height: 180px;
+    margin-right: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+  }
+  .video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+  }
+  .custom-video-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .custom-video-container video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .video-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+
+  .detail-container {
+    padding: 10px;
+    margin-top: 0;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  .detail-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .table-container{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 80px;
+  }
+  .table-container table {
+    width: 700px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed;
+  }
+  .table-container table td,th {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .testimonial-section {
+    text-align: center;
+    padding: 40px 30px;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .testimonial-section p {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align:justify;
+  }
+
+  .videos-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .videos-container video {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .testimonial-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 40px 0;
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollLeft 30s linear infinite;
+    width: fit-content;
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+
+  .review-card {
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    flex-shrink: 0;
+  }
+
+  .rating {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .stars {
+    color: #0046c0;
+    margin-left: 8px;
+  }
+
+  .review-text {
+    font-size: 1.1rem;
+    color: #111;
+    margin-bottom: 15px;
+  }
+
+  .review-author {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  .custom-container {
+    text-align: center;
+    padding: 50px 0px;
+    max-width: 1300px;
+    margin: auto;
+  }
+  .custom-container p {
+    max-width: 2000px;
+    margin: 8px  90px;
+    right:30px;
+    font-size: 18px;
+    line-height: 1.3;
+    color:gray;
+  }
+  .services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 50px;
+  }
+
+  .service {
+    flex: 0 0 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    min-width: 280px;
+  }
+
+  .service-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: justify;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: auto;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  .service-content h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .service-content p {
+    color: #555;
+    margin-bottom: 40px;
+    font-size:17px;
+    line-height: 1.3;
+    text-align: justify;
+    gap: 5px;
+
+  }
+
+  .service-button {
+    display: inline-block;
+    background-color: #0052cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .service-button:hover {
+    background-color: #003d99;
+  }
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+
+  .animate-left:nth-child(1) { animation-delay: 0.1s; }
+  .animate-left:nth-child(2) { animation-delay: 0.2s; }
+  .animate-left:nth-child(3) { animation-delay: 0.3s; }
+
+  .animate-right:nth-child(4) { animation-delay: 0.1s; }
+  .animate-right:nth-child(5) { animation-delay: 0.2s; }
+  .animate-right:nth-child(6) { animation-delay: 0.3s; }
+
+  .adaption-container {
+    text-align: center;
+    padding-bottom: 50px;
+    padding: 20px 0px;
+    max-width: 1300px;
+    margin: auto;
+  }
+  .adaption-container p {
+    max-width: 2000px;
+    margin: 10px  80px;
+    right:30px;
+    font-size: 20px;
+    line-height: 1.3;
+    color:gray;
+  }
+  .tab-container {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    padding: 10px 290px;
+    align-items: center;
+    margin-top:-30px;
+  }
+
+  .tab {
+    padding: 15px 20px;
+    background-color:  #f5f5f5;
+    color: #0052cc;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .tab.active {
+    background-color: #0052cc;
+    color: white;
+  }
+  .outsourcing-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .image-column {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+
+  .image-column img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .content-column {
+    flex: 1.2;
+    min-width: 320px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .content-column h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .content-column p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.9;
+    color:gray;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .pricing-model {
+    margin-top: 25px;
+  }
+
+  .pricing-model h3 {
+    color: #0052cc;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .check-icon {
+    color: #0052cc;
+    margin-right: 8px;
+  }
+
+  .arrow-icon {
+    color: #0052cc;
+    margin-right: 8px;
+  }
+
+  .pricing-model ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .pricing-model li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color:gray;
+    gap:15px;
+  }
+  .button-group-center {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px;
+    margin-left:5in;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+  }
+
+  .btn-outline {
+    background-color: white;
+    color: #0066ff;
+    border: 2px solid #0066ff;
+  }
+  .cycle-container {
+    display:relative;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0px;
+  }
+  .cycle-text{
+    font-size: 18px;
+    text-align: center;
+  }
+  .cycle-img {
+    width: 80%;
+    height: auto;
+    max-width: 80%;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+    transition: transform 0.5s ease;
+  }
+  .cycle-container img:hover {
+    transform: scale(1.05);
+  }
+  .btns-primary {
+    background-color: #0066ff;
+    color: white;
+    width: 200px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-items: center;
+    margin-left: 5.5in;
+  }
+
+  .btns-primary:hover {
+    background-color: #004bb5;
+  }
+
+  .tech-stack-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    margin-top: -60px;
+  }
+
+
+  .tech-stack-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #111;
+  }
+  .tech-stack-section p {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #111;
+    margin-top:50px;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+
+  .logo-container img:hover {
+    transform: scale(1.05);
+  }
+
+  .servicess-section {
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .servicess-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    transition: transform 0.3s ease;
+  }
+
+  .servicess-box {
+    display: flex;
+    align-items: flex-start;
+    width: 320px;
+    gap: 15px;
+    text-align: left;
+  }
+
+  .servicess-box img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .servicess-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .servicess-text p {
+    font-size: 15px;
+    color: #444;
+    margin: 0;
+  }
+
+
+  .servicess-row .servicess-box {
+    justify-content: center;
+  }
+
+
+  .shift-0 {
+    transform: translateX(0);
+  }
+  .shift-right {
+    transform: translateX(50px);
+  }
+  .shift-left {
+    transform: translateX(-50px);
+  }
+  .servicess-header {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+  }
+
+  .servicess-header h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .servicess-header p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .more-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .more-text h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #111;
+  }
+  .consultation-section {
+    background: linear-gradient(to bottom right, #eaf6fd, #ffffff);
+    padding: 60px 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .form-box {
+    flex: 1 1 45%;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 30px 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-box h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-box p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .form-box form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-box label {
+    margin: 10px 0 5px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .form-box input,
+  .form-box textarea {
+    padding: 18px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+  }
+  .submit-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  .info-box {
+    flex: 1 1 45%;
+    animation: slideInLeft 1s ease-in-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  .info-box h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .info-item {
+    margin-bottom: 60px;
+  }
+  .info-item h5 {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 50px;
+  }
+  .info-item span {
+    color: #357edd;
+    margin-right: 20px;
+  }
+
+  @keyframes slideInLeft {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .footer-container {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 40px;
+    font-family: sans-serif;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #d3d3d3;
+  }
+
+  .footer-section p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .social-icons img {
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0 0;
+    color: #ccc;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+  }
+  @media (max-width: 991px) {
+    .hero-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 30px;
+      height: auto;
+      background-position: center;
+      text-align: center;
+    }
+
+    .content-box {
+      padding: 60px 40px;
+      max-width: 90%;
+      margin-top: 0;
+    }
+
+    .heading {
+      font-size: 32px;
+    }
+
+    .badge {
+      font-size: 16px;
+      padding: 6px 14px;
+    }
+
+    .cta-buttons {
+      font-size: 13px;
+      padding: 10px 20px;
+    }
+    .video-container {
+      height: auto;
+      padding: 40px 15px;
+      font-size: 14px;
+      width: 80%;
+    }
+    .video-heading {
+      font-size: 20px;
+    }
+    .table-container {
+      padding: 40px 30px;
+    }
+    .custom-container p {
+      margin: 8px 40px;
+      font-size: 16px;
+      text-align: justify;
+    }
+    .service {
+      flex: 0 0 45%;
+      max-width: 45%;
+    }
+    .adaption-container p {
+      margin: 10px 40px;
+      font-size: 18px;
+    }
+
+    .tab-container {
+      flex-direction: column;
+      padding: 10px 60px;
+      align-items: stretch;
+    }
+
+    .tab {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      padding: 14px 0;
+    }
+    .outsourcing-wrapper {
+      flex-direction: column;
+      padding: 40px 40px;
+      gap: 30px;
+    }
+
+    .content-column h2 {
+      font-size: 28px;
+    }
+
+    .content-column p {
+      font-size: 20px;
+    }
+
+    .pricing-model li {
+      font-size: 16px;
+    }
+    .servicess-box {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+
+    .servicess-row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .servicess-header h2,
+    .more-text h3 {
+      font-size: 24px;
+    }
+
+    .servicess-header p {
+      font-size: 14px;
+    }
+
+    .servicess-text h3 {
+      font-size: 16px;
+    }
+
+    .servicess-text p {
+      font-size: 13px;
+    }
+  }
+
+  /* Mobile View (≤ 575px) */
+  @media (max-width: 575px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 12px 16px;
+    }
+
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .logo-text h1 {
+      font-size: 16px;
+    }
+
+    .logo-text span {
+      font-size: 8px;
+    }
+
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+      display: none; /* Initially hidden */
+      margin-top: 10px;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+    }
+
+    .cta-button {
+      width: 100%;
+      padding: 6px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      padding-left: 10px;
+    }
+
+    .dropdown-content a {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+    .hero-section {
+      padding: 40px 20px;
+    }
+
+    .content-box {
+      padding: 30px 20px;
+    }
+
+    .heading {
+      font-size: 26px;
+    }
+
+    .badge {
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    .cta-buttons {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .video-container {
+      padding: 30px 10px;
+      font-size: 13px;
+
+    }
+    .video-heading {
+      font-size: 18px;
+    }
+    .table-container {
+      padding: 20px 25px;
+    }
+
+    .table-container table {
+      min-width: 80%;
+      font-size: 14px;
+    }
+
+    .table-container table td,
+    .table-container table th {
+      padding: 8px;
+    }
+    .custom-container {
+      padding: 30px 15px;
+    }
+
+    .custom-container p {
+      margin: 8px 20px;
+      font-size: 14px;
+      text-align: justify;
+    }
+    .services-row {
+      flex-direction: column;
+      padding: 30px 20px;
+      gap: 30px;
+    }
+
+    .service {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .service-inner {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 40px 40px;
+    }
+
+    .service-content p {
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .service-content h3 {
+      font-size: 1.1rem;
+    }
+
+    .service-icon {
+      margin: 0 auto 10px auto;
+    }
+    .adaption-container p {
+      margin: 10px 20px;
+      font-size: 16px;
+    }
+    .adaption-container h1 {
+      margin: 10px 20px;
+      font-size: 18px;
+    }
+    .tab-container {
+      padding: 10px 18px;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .tab {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      padding: 12px 0;
+    }
+    .outsourcing-wrapper {
+      overflow-x: hidden;
+      box-sizing: border-box;
+      padding: 25px 10px;
+      gap:5px;
+    }
+
+    .content-column h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .content-column p {
+      font-size: 16px;
+      line-height: 1.6;
+      width: 80%;
+      text-align: justify;
+    }
+
+    .pricing-model h3 {
+      font-size: 15px;
+      justify-content: center;
+    }
+
+    .pricing-model li {
+      font-size: 14px;
+      text-align: center;
+      flex-direction: column;
+      gap: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5px;
+      word-wrap: break-word;
+      word-break: break-word;
+      max-width: 90%;
+      box-sizing: border-box;
+    }
+
+    .button-group-center {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 250px;
+    }
+    .logo-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .servicess-section {
+      padding: 30px 10px;
+    }
+
+    .servicess-row {
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .servicess-box {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+
+    .servicess-box img {
+      margin: 0 auto;
+    }
+
+    .servicess-text h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .servicess-text p {
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+
+    .servicess-header {
+      padding: 0 10px;
+      margin-bottom: 30px;
+    }
+
+    .servicess-header h2 {
+      font-size: 22px;
+    }
+
+    .servicess-header p {
+      font-size: 14px;
+    }
+
+    .more-text h3 {
+      font-size: 22px;
+      padding: 0 10px;
+    }
+
+    .shift-left,
+    .shift-right {
+      transform: none;
+    }
+  }
+</style>
+  </head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="./assessts/logo.png" alt="Logo" />
+
+  </div>
+
+
+
+  <div class="dropdown-wrapper">
+      <a href="#"  class="dropdown">Services</a>
+      <div class="dropdown-content">
+        <a href="https://mallow-tech.com/services/web-app-development/">Web Development</a>
+        <a href="https://mallow-tech.com/services/mobile-development/">Mobile Application Development</a>
+        <a href="https://mallow-tech.com/services/data-analytics/">Data Analytics</a>
+        <a href="https://mallow-tech.com/services/devops-consulting-services/">DevOps</a>
+        <a href="https://mallow-tech.com/services/ui-ux-design/">UI/UX Design</a>
+        <a href="https://mallow-tech.com/services/testing/">Quality Assurance</a>
+      </div>
+    </div>
+    <div class="dropdown-wrapper">
+      <a href="#" class="dropdown">Technologies</a>
+      <div class="dropdown-content">
+        <a href="https://mallow-tech.com/ruby-on-rails-development-company/">Ruby on Rails</a>
+        <a href="https://mallow-tech.com/laravel-development-company/">PHP on Laravel</a>
+        <a href="https://mallow-tech.com/technologies/android-app-development-company/">Android</a>
+        <a href="https://mallow-tech.com/technologies/ios-app-development-company/">Ios</a>
+        <a href="https://mallow-tech.com/technologies/flutter-app-development/">Flutter</a>
+        <a href="https://mallow-tech.com/technologies/python-development-company/">Python</a>
+        <a href="https://mallow-tech.com/technologies/reactjs-development-company/">React js</a>
+        <a href="https://mallow-tech.com/technologies/power-bi/">Power BI Development Service</a>
+      </div>
+    </div>
+    <a href="#">Pricing</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Learning Hub</a>
+  </div>
+  <a href="#" class="cta-button">TALK TO AN EXPERT</a>
+</nav>
+<section class="hero-section">
+  <div class="content-box">
+    <div class="badge">Digitisation & Automation</div>
+    <div class="heading">Grow your business through digital applications</div>
+    <a href="#" class="cta-button">TALK TO AN EXPERT</a>
+  </div>
+</section>
+<div class="scroll-wrapper">
+  <div class="scroll-track">
+  <img src="./assessts/pic1.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic2.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic3.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic4.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic5.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic6.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic7.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic8.jpg" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic9.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic10.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic11.png" alt="Scrolling Image" class="scrolling-image">
+  <img src="./assessts/pic12.png" alt="Scrolling Image" class="scrolling-image">
+
+    <img src="./assessts/pic1.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic2.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic3.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic4.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic5.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic6.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic7.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic8.jpg" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic9.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic10.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic11.png" alt="Scrolling Image" class="scrolling-image">
+    <img src="./assessts/pic12.png" alt="Scrolling Image" class="scrolling-image">
+</div>
+</div>
+<div class="custom-video-container">
+  <h1>Understand your journey with mallow better</h1>
+  <video src="https://assets.mallow-tech.com/2024/09/Mallow-Intro-video-6-1-1.mp4" controls autoplay muted playsinline></video>
+</div>
+
+
+<div class="detail-container">
+  <div class="detail-cointainer img">
+    <img src="./assessts/detailpic.png" alt="">
+  </div>
+</div>
+<div class="table-container">
+  <h1>How we empowered our clients to overcome their challenges</h1>
+  <div class="table-container table">
+    <table>
+      <tr>
+        <th>What challenges do they face</th>
+        <th>What transformations do they witnessed</th>
+      </tr>
+      <tr>
+        <td>▲Legacy applications limiting business growth</td>
+        <td>▲Modernized apps enhancing scalability by 15x business growth</td>
+      </tr>
+      <tr>
+        <td>▼High costs for system upkeep</td>
+        <td>▲Streamlined processes reducing maintenance expenses</td>
+      </tr>
+      <tr>
+        <td>▼Systems not working well together</td>
+        <td>▲Integrated solutions improving data flow</td>
+      </tr>
+      <tr>
+        <td>▼Projects going over budget</td>
+        <td>▲Accurate estimates keeping projects within budget</td>
+      </tr>
+      <tr>
+        <td>▼Slow development cycles</td>
+        <td>▲Agile methods accelerating time-to-market</td>
+      </tr>
+      <tr>
+        <td>▼Weak security measures</td>
+        <td>	▲Robust protections decreasing breaches</td>
+      </tr>
+      <tr>
+        <td>▼Complicated user interfaces</td>
+        <td>▲User-friendly designs increasing satisfaction</td>
+      </tr>
+      <tr>
+        <td>▼Manual repetitive tasks consuming time</td>
+        <td>▲Automation streamlining operations, saving significant time by 70%</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="testimonial-section">
+  <h2 style="font-size:40px;">Why our clients keep choosing us? Listen from them…</h2>
+  <br>
+  <p>
+    Discover why our clients have consistently chosen us for their software development needs.
+    As a trusted software development agency with over 13 years of experience, our dedicated team
+    delivers exceptional solutions, empowering your business to thrive. With our flexible scaling
+    and unwavering commitment to client satisfaction, we’re your go-to partner for innovative
+    software development.
+  </p>
+
+  <div class="videos-container">
+    <video controls>
+      <source src="https://assets.mallow-tech.com/2024/10/Brian-Testimonial-Video-2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="https://assets.mallow-tech.com/2024/10/Aaron-Testimonial-Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+<div class="testimonial-wrapper">
+  <div class="testimonial-track">
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"They deliver their items on time."</p>
+      <p class="review-author">Oky Sabeni, Product Manager, Podseeker</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"They've become a valuable strategic partner."</p>
+      <p class="review-author">Aaron Kassover, Founder, AgentMethods</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"The product delivered is up to our expectations."</p>
+      <p class="review-author">Dinesh Kumar, Manager, The Karur Vysya Bank Limited</p>
+    </div>
+
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"The work is high-quality, but I especially appreciated Mallow Technologies' autonomy."</p>
+      <p class="review-author">Chris Atkinson, CEO, Fleetrover</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"They offer great communication matched with technical skills and reliability."</p>
+      <p class="review-author">Brian Casel, Owner, Instrumental Products</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"They deliver their items on time"</p>
+      <p class="review-author">Oky Sabeni, Product Manager, Podseeker</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"Their reliability, attention to detail, transparency, and technical communication has been excellent."</p>
+      <p class="review-author">Brian Casel, Founder & CEO, SaaS Product Company</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"They have become a true business partner that I can rely on to perform without worry and deliver without hesitation."</p>
+      <p class="review-author">Chris Jones, CTO, School Shares</p>
+    </div>
+    <div class="review-card">
+      <div class="rating">5.0 <span class="stars">★★★★★</span></div>
+      <p class="review-text">"The work is high-quality, but I especially appreciated Mallow Technologies' autonomy."</p>
+      <p class="review-author"> Chris Atkinson, CEO, Fleetrover</p>
+    </div>
+  </div>
+</div>
+<div class="custom-container">
+  <h1>What custom software development services we offer</h1>
+  <p>Enhance your business with the latest technology. Utilize our expertise to craft innovative digital solutions that fuel growth and keep you ahead
+    of the competition. Let us guide you in transforming your business into a market leader with the power of cutting-edge technology.</p>
+</div>
+
+<div class="services-row">
+  <div class="service">
+    <div class="service animate-left">
+      <div class="service-inner">
+        <img src="./assessts/logo1.png" alt="Web App Icon" class="service-icon">
+           <div class="service-content">
+              <h3>Web app development</h3>
+             <p>
+              Our developers create custom web applications using modern technologies to deliver robust, scalable, and user-friendly solutions.
+             </p>
+             <a href="#" class="service-button">Explore more</a>
+           </div>
+      </div>
+    </div>
+  </div>
+  <div class="service">
+    <div class="service animate-left">
+       <div class="service-inner">
+          <img src="./assessts/logo2.png" alt="Mobile App Icon" class="service-icon">
+            <div class="service-content">
+               <h3>Mobile app development</h3>
+               <p>
+                 We craft engaging native iOS, Android, and cross-platform apps,ensuring optimal performance and seamless user experiences.
+               </p>
+               <a href="#" class="service-button">Explore more</a>
+            </div>
+       </div>
+    </div>
+  </div>
+  <div class="service">
+    <div class="service animate-left">
+        <div class="service-inner">
+           <img src="./assessts/logo3.png" alt="DevOps Icon" class="service-icon">
+              <div class="service-content">
+                 <h3>DevOps</h3>
+                 <p>
+                   Streamline development and delivery with our DevOps expertise, using automation and CI/CD pipelines to boost speed and quality.
+                 </p>
+                 <a href="#" class="service-button">Explore more</a>
+              </div>
+        </div>
+    </div>
+  </div>
+  <div class="service">
+    <div class="service animate-right">
+       <div class="service-inner">
+           <img src="./assessts/logo4.png" alt="DevOps Icon" class="service-icon">
+              <div class="service-content">
+                 <h3>UI/UX Design</h3>
+                 <p>
+                   Our designers craft stunning, intuitive interfaces tailored to your audience, enhancing user experience and engagement.
+                 </p>
+                 <a href="#" class="service-button">Explore more</a>
+              </div>
+       </div>
+    </div>
+  </div>
+  <div class="service">
+    <div class="service animate-right">
+        <div class="service-inner">
+          <img src="./assessts/logo5.png" alt="DevOps Icon" class="service-icon">
+            <div class="service-content">
+               <h3>Data Analytics</h3>
+               <p>
+                 Unlock data potential with our analytics solutions, providing insights to drive trends and improve business performance.
+               </p>
+               <a href="#" class="service-button">Explore more</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="service">
+    <div class="service animate-right">
+        <div class="service-inner">
+           <img src="./assessts/logo6.png" alt="DevOps Icon" class="service-icon">
+              <div class="service-content">
+                 <h3>Software testing</h3>
+                 <p>
+                   Ensure software quality with our testing services, including functional, performance, and security checks to resolve issues before deployment
+                 </p>
+                 <a href="#" class="service-button">Explore more</a>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="adaption-container">
+  <h1>What are the best outsourcing solutions we offer that are adaptable to your business needs</h1>
+  <p class="adaption-container text p">Looking to optimize your web and mobile app development process? Discover our tailored outsourcing models designed to meet your project needs and business goals.</p>
+</div>
+<div class="tab-container">
+  <div class="tab active">Project-based outsourcing</div>
+  <div class="tab">IT Staff augmentation</div>
+  <div class="tab">Dedicated Development Team (DDT)</div>
+</div>
+<div class="outsourcing-wrapper">
+  <div class="image-column">
+    <img src="./assessts/pic13.jpg" alt="Project Outsourcing Illustration" />
+  </div>
+
+  <div class="content-column">
+    <h2>Project-based outsourcing</h2>
+    <p>
+      Opt for project-based outsourcing when you need a specialized team to deliver a defined project on time and within budget.
+      Mallow manages the entire lifecycle from planning and development to testing and deployment,
+      providing a fully managed solution with clear timelines, ideal for projects with well-defined requirements.
+    </p>
+    <p>Choose from the wide range of pricing models</p>
+
+    <div class="pricing-model">
+      <h3><span class="check-icon">✔</span> Fixed price model</h3>
+      <ul>
+        <li><span class="arrow-icon">➔</span> The total cost is agreed upfront based on a well-defined, stable project scope.</li>
+        <li><span class="arrow-icon">➔</span> Ideal for small to mid-sized projects with clear requirements, timelines, and deliverables.</li>
+      </ul>
+    </div>
+
+    <div class="pricing-model">
+      <h3><span class="check-icon">✔</span> Time and Material (T&M) model</h3>
+      <ul>
+        <li><span class="arrow-icon">➔</span> Clients are billed based on actual time spent and resource rates.</li>
+        <li><span class="arrow-icon">➔</span> Suitable for projects with evolving requirements, like agile development or undefined scopes.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="button-group-center">
+  <button class="btn btn-primary">Explore more</button>
+  <button class="btn btn-outline">Let’s build the app!</button>
+</div>
+<div class="cycle-container">
+  <div class="cycle-text">
+    <h1>3 simple steps to your project</h1>
+  </div>
+  <div class="cycle-img">
+    <img src="./assessts/cycle.png" alt="Cycle 1" />
+    <button class="btns btns-primary">Consult with Experts</button>
+  </div>
+</div>
+
+<div class="tech-stack-section">
+  <h2>Have a glance at the building blocks we use for your digital success</h2>
+  <div class="logo-container">
+    <img src="./assessts/blocks.png" alt="Technology Stack">
+  </div>
+  <p>and much more...</p>
+</div>
+<section class="servicess-section">
+  <div class="servicess-header">
+    <h2>Your industry, our solution. Big or small, we've got you covered.</h2>
+    <p>
+      Need a solution tailored to your industry’s unique challenges? Our expertise covers businesses of all sizes.
+      Whether you’re a startup or an established enterprise, our tailored solutions provide the support you need to succeed.
+    </p>
+  </div>
+  <div class="servicess-row shift-0">
+    <div class="servicess-box">
+      <img src="./assessts/p1.png" alt="">
+      <div class="servicess-text">
+        <h3>Agriculture</h3>
+        <p>Revolutionizing farming with innovative technology to enhance productivity, efficiency, and environmental stewardship in farming</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p2.png" alt="">
+      <div class="servicess-text">
+        <h3>Automotive</h3>
+        <p>Empowering automotive excellence for improved performance and safety</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p3.png" alt="">
+      <div class="servicess-text">
+        <h3>Computer & electronics</h3>
+        <p>Transform computer & electronics with bespoke features and next-gen technology</p>
+      </div>
+    </div>
+  </div>
+  <div class="servicess-row shift-0">
+    <div class="servicess-box">
+      <img src="./assessts/p4.png" alt="">
+      <div class="servicess-text">
+        <h3>Consumer goods</h3>
+        <p>Deploy IT solutions to improve, streamline, and modernize consumer goods operations</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p5.png" alt="">
+      <div class="servicess-text">
+        <h3>Education</h3>
+        <p>Optimize educational systems with technology for improved teaching and learning</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p6.png" alt="">
+      <div class="servicess-text">
+        <h3>Energy – oil & gas</h3>
+        <p>Streamline oil and gas workflows with customized IT solutions and real-time monitoring</p>
+      </div>
+    </div>
+  </div>
+  <div class="servicess-row shift-0">
+    <div class="servicess-box">
+      <img src="./assessts/p7.png" alt="">
+      <div class="servicess-text">
+        <h3>Financial services</h3>
+        <p>Achieve rapid, secure financial solutions with scalability and enhanced customer satisfaction</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p8.png" alt="">
+      <div class="servicess-text">
+        <h3>Healthcare</h3>
+        <p>Advance healthcare with IT to boost diagnostics accuracy and patient care</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p9.png" alt="">
+      <div class="servicess-text">
+        <h3>Hospitality</h3>
+        <p>Smart solutions for personalized guest experiences through advanced data analytics and seamless integration</p>
+      </div>
+    </div>
+  </div>
+  <div class="servicess-row shift-0">
+    <div class="servicess-box">
+      <img src="./assessts/p10.png" alt="">
+      <div class="servicess-text">
+        <h3>Manufacturing</h3>
+        <p>Utilize agile manufacturing and automation with optimized production planning</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p11.png" alt="">
+      <div class="servicess-text">
+        <h3>Marketing & advertising</h3>
+        <p>Power marketing with advanced data interpretation and personalized advertising strategies</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p12.png" alt="">
+      <div class="servicess-text">
+        <h3>Professional services</h3>
+        <p>Empower with advanced CRM solutions and streamlined workflow automation</p>
+      </div>
+    </div>
+  </div>
+  <div class="servicess-row shift-0">
+    <div class="servicess-box">
+      <img src="./assessts/p13.png" alt="">
+      <div class="servicess-text">
+        <h3>Real estate & construction</h3>
+        <p>Advance real estate and construction through precise planning and superior efficiency and visualization</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p14.png" alt="">
+      <div class="servicess-text">
+        <h3>Transportation & logistics</h3>
+        <p>Facilitate real-time fleet management with seamless communication and enhanced customer service</p>
+      </div>
+    </div>
+    <div class="servicess-box">
+      <img src="./assessts/p15.png" alt="">
+      <div class="servicess-text">
+        <h3>Travel</h3>
+        <p>Enrich the travel industry with cohesive booking systems and live itinerary updates.</p>
+      </div>
+    </div>
+  </div>
+  <div class="more-text">
+    <h3>and much more....</h3>
+  </div>
+</section>
+<section class="consultation-section">
+  <div class="container">
+    <div class="form-box">
+      <h2>Claim your complimentary app consultation now!</h2>
+      <p>Schedule a free consultation with our experts to explore how we can help you achieve your business goals</p>
+
+      <form>
+        <label>First Name *</label>
+        <input type="text" required>
+
+        <label>Last Name *</label>
+        <input type="text" required>
+
+        <label>Email *</label>
+        <input type="email" required>
+
+        <label>Company Name *</label>
+        <input type="text" required>
+
+        <label>Tell us more about your application *</label>
+        <textarea placeholder="Please share us more details about your project." required></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+
+    <div class="info-box animated">
+      <h2>What happens after you fill-up the form?</h2>
+
+      <div class="info-item">
+        <p><span>✔</span> <strong>Request a consultation</strong><br></p>
+          <h5>By completely filling out the form, you'll be able to book a meeting at a time that suits you. After booking the meeting,
+          you'll receive two emails - a booking confirmation email and an email from the member of our team you'll be meeting that will
+          help you prepare for the call.</h5>
+      </div>
+
+      <div class="info-item">
+        <p><span>✔</span> <strong>Speak with our experts</strong><br></p>
+          <h5>During the consultation, we will listen to your questions and challenges, and provide personalised guidance and actionable
+          recommendations to address your specific needs.</h5>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="footer-container">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>About us</h3>
+      <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Technologies</li>
+        <li>Career</li>
+        <li>Learning Hub</li>
+        <li>Talk to an Expert</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>Web app development</li>
+        <li>Mobile app development</li>
+        <li>Data Analytics</li>
+        <li>DevOps</li>
+        <li>UI/UX design</li>
+        <li>Quality assurance</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Technologies</h3>
+      <ul>
+        <li>Ruby on Rails</li>
+        <li>PHP on Laravel</li>
+        <li>Android</li>
+        <li>iOS</li>
+        <li>Flutter</li>
+        <li>Python</li>
+        <li>Reactjs</li>
+        <li>Power BI development services</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contacts</h3>
+      <p><strong>contact@mallow-tech.com</strong></p>
+      <div class="social-icons">
+        <img src="./assessts/t1.png" alt="Twitter" />
+        <img src="./assessts/t2.png" alt="Facebook" />
+        <img src="./assessts/t3.png" alt="LinkedIn" />
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <p class="footer-bottom">
+    Copyright © 2025 Mallow Technologies Private Limited. All Rights Reserved.
+  </p>
+</div>
+
+
+</body>
