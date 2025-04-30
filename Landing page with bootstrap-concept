@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example Bootstrap Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+    <a class="navbar-brand" href="#">
+        <img src="./assessts/Group-2.png" alt="Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Services
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/services/web-app-development/">Web Development</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/services/mobile-development/">Mobile App</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/services/data-analytics/">Data Analytics</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/services/devops-consulting-services/">DevOps</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/services/ui-ux-design/">UI/UX Design</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/services/testing/">Quality Assurance</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Technologies
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/ruby-on-rails-development-company/">Ruby on Rails</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/laravel-development-company/">PHP on Laravel</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/technologies/android-app-development-company/">Android</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/technologies/ios-app-development-company/">iOS</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/technologies/flutter-app-development/">Flutter</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/technologies/python-development-company/">Python</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/technologies/reactjs-development-company/">React JS</a></li>
+                    <li><a class="dropdown-item" href="https://mallow-tech.com/technologies/power-bi/">Power BI</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Learning Hub</a></li>
+        </ul>
+
+        <a href="#" class="btn btn-primary">TALK TO AN EXPERT</a>
+    </div>
+</nav>
+
+
+<section
+        class="container-fluid text-center text-white py-5"
+        style="background: url('./assessts/heads-img.jpeg') center center / cover no-repeat;">
+
+    <div class="container">
+        <span class="badge bg-primary mb-3">Digitisation & Automation</span>
+        <h1 class="mb-4">Grow your business through digital applications</h1>
+        <a href="#" class="btn btn-primary">TALK TO AN EXPERT</a>
+    </div>
+</section>
+
+
+
+<div class="container-fluid overflow-hidden py-3 bg-white">
+    <div class="d-flex flex-nowrap">
+
+        <img src="./assessts/pic1.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic2.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic3.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic4.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic5.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic6.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic7.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic8.jpg" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic9.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic10.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic11.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic12.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic1.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic2.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic3.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic4.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic5.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic6.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic7.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic8.jpg" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic9.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic10.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic11.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+        <img src="./assessts/pic12.png" class="img-fluid me-3" alt="Image" style="height: 80px;">
+    </div>
+</div>
+
+<div class="container text-center my-5">
+    <h1 class="mb-4">Understand your journey with Mallow better</h1>
+    <div class="ratio ratio-16x9">
+        <video src="https://assets.mallow-tech.com/2024/09/Mallow-Intro-video-6-1-1.mp4" controls autoplay muted playsinline></video>
+    </div>
+</div>
+<div class="container detail-container">
+    <div class="row">
+        <div class="col detail-image">
+            <img src="./assessts/detailpic.png" alt="Detail" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="container table-responsive my-4">
+    <table class="table table-bordered align-middle text-start">
+        <thead class="table-light">
+        <tr>
+            <th>What challenges do they face?</th>
+            <th>What transformations have they witnessed?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="text-danger">▼</span> Legacy applications limiting business growth</td>
+            <td><span class="text-success">▲</span> Modernized apps enhancing scalability by 15x business growth</td>
+        </tr>
+        <tr>
+            <td><span class="text-danger">▼</span> High costs for system upkeep</td>
+            <td><span class="text-success">▲</span> Streamlined processes reducing maintenance expenses</td>
+        </tr>
+        <tr>
+            <td><span class="text-danger">▼</span> Systems not working well together</td>
+            <td><span class="text-success">▲</span> Integrated solutions improving data flow</td>
+        </tr>
+        <tr>
+            <td><span class="text-danger">▼</span> Projects going under</td>
+            <td><span class="text-success">▲</span> Accurate estimates keeping projects on track</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container testimonial-section my-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="display-5 fs-4 fw-bold">Why our clients keep choosing us? Listen from them…</h2>
+            <p class="mt-4 fs-6" style="text-align: justify;">
+                Discover why our clients have consistently chosen us for their software development needs.
+                As a trusted software development agency with over 13 years of experience, our dedicated team
+                delivers exceptional solutions, empowering your business to thrive. With our flexible scaling
+                and unwavering commitment to client satisfaction, we’re your go-to partner for innovative
+                software development.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+                <video controls>
+                    <source src="https://assets.mallow-tech.com/2024/10/Brian-Testimonial-Video-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+                <video controls>
+                    <source src="https://assets.mallow-tech.com/2024/10/Aaron-Testimonial-Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Review 1 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="mb-2 text-warning fw-bold">5.0 <span class="text-warning">★★★★★</span></div>
+                    <p class="card-text">"They deliver their items on time."</p>
+                    <p class="text-muted mb-0">Oky Sabeni, Product Manager, Podseeker</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="mb-2 text-warning fw-bold">5.0 <span class="text-warning">★★★★★</span></div>
+                    <p class="card-text">"They've become a valuable strategic partner."</p>
+                    <p class="text-muted mb-0">Aaron Kassover, Founder, AgentMethods</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="mb-2 text-warning fw-bold">5.0 <span class="text-warning">★★★★★</span></div>
+                    <p class="card-text">"The product delivered is up to our expectations."</p>
+                    <p class="text-muted mb-0">Dinesh Kumar, Manager, The Karur Vysya Bank Limited</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="mb-2 text-warning fw-bold">5.0 <span class="text-warning">★★★★★</span></div>
+                    <p class="card-text">"The work is high-quality, but I especially appreciated Mallow Technologies' autonomy."</p>
+                    <p class="text-muted mb-0">Chris Atkinson, CEO, Fleetrover</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="mb-2 text-warning fw-bold">5.0 <span class="text-warning">★★★★★</span></div>
+                    <p class="card-text">"They offer great communication matched with technical skills and reliability."</p>
+                    <p class="text-muted mb-0">Brian Casel, Owner, Instrumental Products</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="mb-2 text-warning fw-bold">5.0 <span class="text-warning">★★★★★</span></div>
+                    <p class="card-text">"They deliver their items on time"</p>
+                    <p class="text-muted mb-0">Oky Sabeni, Product Manager, Podseeker</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="display-5 fs-4 fw-bold">What custom software development services we offer</h1>
+            <p class="lead fs-6" style="text-align: justify;">Enhance your business with the latest technology. Utilize our expertise to craft innovative digital solutions that fuel growth and keep you ahead
+                of the competition. Let us guide you in transforming your business into a market leader with the power of cutting-edge technology.</p>
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 animate-left text-center">
+                <img src="./assessts/logo1.png" class="card-img-top mx-auto mt-3" alt="Web App Icon" style="width: 80px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Web App Development</h5>
+                    <p class="card-text">
+                        Our developers create custom web applications using modern technologies to deliver robust, scalable, and user-friendly solutions.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Explore more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 animate-left text-center">
+                <img src="./assessts/logo2.png" class="card-img-top mx-auto mt-3" alt="Mobile App Icon" style="width: 80px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Mobile App Development</h5>
+                    <p class="card-text">
+                        We craft engaging native iOS, Android, and cross-platform apps, ensuring optimal performance and seamless user experiences.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Explore more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 animate-left text-center">
+                <img src="./assessts/logo3.png" class="card-img-top mx-auto mt-3" alt="DevOps Icon" style="width: 80px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">DevOps</h5>
+                    <p class="card-text">
+                        Streamline development and delivery with our DevOps expertise, using automation and CI/CD pipelines to boost speed and quality.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Explore more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 animate-right text-center">
+                <img src="./assessts/logo4.png" class="card-img-top mx-auto mt-3" alt="UI/UX Icon" style="width: 80px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">UI/UX Design</h5>
+                    <p class="card-text">
+                        Our designers craft stunning, intuitive interfaces tailored to your audience, enhancing user experience and engagement.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Explore more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 animate-right text-center">
+                <img src="./assessts/logo5.png" class="card-img-top mx-auto mt-3" alt="Data Analytics Icon" style="width: 80px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Data Analytics</h5>
+                    <p class="card-text">
+                        Unlock data potential with our analytics solutions, providing insights to drive trends and improve business performance.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Explore more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 animate-right text-center">
+                <img src="./assessts/logo6.png" class="card-img-top mx-auto mt-3" alt="Software Testing Icon" style="width: 80px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Software Testing</h5>
+                    <p class="card-text">
+                        Ensure software quality with our testing services, including functional, performance, and security checks to resolve issues before deployment.
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-2">Explore more</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center py-5">
+    <h1 class="display-5 fw-bold fs-5">What are the best outsourcing solutions we offer that are adaptable to your business needs</h1>
+    <p class="fs-6 mt-3" style="text-align: justify;">
+        Looking to optimize your web and mobile app development process? Discover our tailored outsourcing models designed to meet your project needs and business goals.
+    </p>
+</div>
+
+<div class="container mb-4 d-flex justify-content-center gap-3 flex-wrap">
+    <button type="button" class="btn btn-primary active">Project-based outsourcing</button>
+    <button type="button" class="btn btn-primary">IT Staff Augmentation</button>
+    <button type="button" class="btn btn-primary">Dedicated Development Team (DDT)</button>
+</div>
+<div class="container py-5">
+    <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 text-center">
+            <img src="./assessts/pic13.jpg" alt="Project Outsourcing Illustration" class="img-fluid rounded">
+        </div>
+
+        <div class="col-lg-6 ps-5">
+            <h2 class="fw-bold mb-3 fs-5">Project-based outsourcing</h2>
+            <p style="text-align: justify;">
+                Opt for project-based outsourcing when you need a specialized team to deliver a defined project on time and within budget.
+                Mallow manages the entire lifecycle from planning and development to testing and deployment,
+                providing a fully managed solution with clear timelines, ideal for projects with well-defined requirements.
+            </p>
+            <p>Choose from the wide range of pricing models:</p>
+
+            <div class="mb-4">
+                <h5 class="fw-semibold text-primary"><i class="bi bi-check-circle-fill me-2"></i>Fixed price model</h5>
+                <ul class="list-unstyled ps-3">
+                    <li><i class="bi bi-arrow-right-circle me-2 text-secondary"></i>The total cost is agreed upfront based on a well-defined, stable project scope.</li>
+                    <li><i class="bi bi-arrow-right-circle me-2 text-secondary"></i>Ideal for small to mid-sized projects with clear requirements, timelines, and deliverables.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="fw-semibold text-primary"><i class="bi bi-check-circle-fill me-2"></i>Time and Material (T&M) model</h5>
+                <ul class="list-unstyled ps-3">
+                    <li><i class="bi bi-arrow-right-circle me-2 text-secondary"></i>Clients are billed based on actual time spent and resource rates.</li>
+                    <li><i class="bi bi-arrow-right-circle me-2 text-secondary"></i>Suitable for projects with evolving requirements, like agile development or undefined scopes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 mt-5">
+        <button class="btn btn-primary">Explore more</button>
+        <button class="btn btn-outline-primary">Let’s build the app!</button>
+    </div>
+</div>
+<div class="container text-center py-5">
+    <h2 class="fw-bold mb-4">
+        3 simple steps to your project.<br>Ready, set, project!
+    </h2>
+    <img src="./assessts/cycle.png" alt="Steps" class="img-fluid mb-4" style="max-width: 300px;">
+    <div>
+        <button class="btn btn-primary btn-lg">Consult with experts</button>
+    </div>
+</div>
+<div class="container text-center py-5">
+    <h2 class="fw-bold mb-4">Have a glance at the building blocks we use for your digital success</h2>
+
+    <div class="mb-4">
+        <img src="./assessts/blocks.png" alt="Technology Stack" class="img-fluid" style="max-width: 300px;">
+    </div>
+
+    <p class="fs-5 text-muted fw-bold">and much more...</p>
+</div>
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3 fs-5">Your industry, our solution. Big or small, we've got you covered.</h2>
+        <p class="mb-5" style="text-align: justify;">
+            Need a solution tailored to your industry’s unique challenges? Our expertise covers businesses of all sizes.
+            Whether you’re a startup or an established enterprise, our tailored solutions provide the support you need to succeed.
+        </p>
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p1.png" class="card-img-top" alt="Agriculture" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Agriculture</h5>
+                        <p class="card-text">Revolutionizing farming with innovative technology to enhance productivity, efficiency, and environmental stewardship in farming</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p2.png" class="card-img-top" alt="Automotive" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Automotive</h5>
+                        <p class="card-text">Empowering automotive excellence for improved performance and safety</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Computer & electronics" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Computer & electronics</h5>
+                        <p class="card-text">Transform computer & electronics with bespoke features and next-gen technology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Consumer goods" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Consumer goods</h5>
+                        <p class="card-text">Deploy IT solutions to improve, streamline, and modernize consumer goods operations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Education" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Education</h5>
+                        <p class="card-text">Optimize educational systems with technology for improved teaching and learning</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Energy – oil & gas" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Energy – oil & gas</h5>
+                        <p class="card-text">Streamline oil and gas workflows with customized IT solutions and real-time monitoring</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Financial services" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Financial services</h5>
+                        <p class="card-text">Achieve rapid, secure financial solutions with scalability and enhanced customer satisfaction</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Healthcare" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Healthcare</h5>
+                        <p class="card-text">Advance healthcare with IT to boost diagnostics accuracy and patient care
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-70 border-0 shadow-sm">
+                    <img src="./assessts/p3.png" class="card-img-top" alt="Hospitality" style="width: 20%;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Hospitality</h5>
+                        <p class="card-text">Smart solutions for personalized guest experiences through advanced data analytics and seamless integration</p>
+                    </div>
+                </div>
+            </div>
+            <section class="py-5 bg-light consultation-section">
+                <div class="container">
+                    <div class="bg-white p-4 p-md-5 shadow rounded">
+                        <h2 class="fw-bold fs-6 mb-3">Claim your complimentary app consultation now!</h2>
+                        <p class="mb-4">Schedule a free consultation with our experts to explore how we can help you achieve your business goals</p>
+
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name *</label>
+                                <input type="text" class="form-control" id="company" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="details" class="form-label">Tell us more about your application *</label>
+                                <textarea class="form-control" id="details" rows="4" placeholder="Please share more details about your project." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary px-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold">What happens after you fill-up the form?</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="p-4 bg-white shadow-sm rounded">
+                                <p class="mb-2">
+                                    <span class="text-success fs-3 fw-bold">✔</span> <strong>Request a consultation</strong>
+                                </p>
+                                <h5 class="fw-normal fs-6" style="text-align: justify;">
+                                    By completely filling out the form, you'll be able to book a meeting at a time that suits you. After booking the meeting,
+                                    you'll receive two emails - a booking confirmation email and an email from the member of our team you'll be meeting that will
+                                    help you prepare for the call.
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="p-4 bg-white shadow-sm rounded">
+                                <p class="mb-2">
+                                    <span class="text-success fs-3 fw-bold">✔</span> <strong>Speak with our experts</strong>
+                                </p>
+                                <h5 class="fw-normal fs-6" style="text-align: justify;">
+                                    During the consultation, we will listen to your questions and challenges, and provide personalised guidance and actionable
+                                    recommendations to address your specific needs.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="bg-dark text-light pt-5">
+                <div class="container">
+                    <div class="row text-center">
+
+                        <div class="col-12 mb-4">
+                            <h5 class="fw-bold">About us</h5>
+                            <ul class="list-unstyled">
+                                <li>Home</li>
+                                <li>Services</li>
+                                <li>Technologies</li>
+                                <li>Career</li>
+                                <li>Learning Hub</li>
+                                <li>Talk to an Expert</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <h5 class="fw-bold">Services</h5>
+                            <ul class="list-unstyled">
+                                <li>Web app development</li>
+                                <li>Mobile app development</li>
+                                <li>Data Analytics</li>
+                                <li>DevOps</li>
+                                <li>UI/UX design</li>
+                                <li>Quality assurance</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <h5 class="fw-bold">Technologies</h5>
+                            <ul class="list-unstyled">
+                                <li>Ruby on Rails</li>
+                                <li>PHP on Laravel</li>
+                                <li>Android</li>
+                                <li>iOS</li>
+                                <li>Flutter</li>
+                                <li>Python</li>
+                                <li>Reactjs</li>
+                                <li>Power BI development services</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <h5 class="fw-bold">Contacts</h5>
+                            <p><strong>contact@mallow-tech.com</strong></p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <img src="./assessts/t1.png" alt="Twitter" width="30" height="30">
+                                <img src="./assessts/t2.png" alt="Facebook" width="30" height="30">
+                                <img src="./assessts/t3.png" alt="LinkedIn" width="30" height="30">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="border-secondary my-4">
+
+                    <div class="text-center pb-3">
+                        <small>Copyright © 2025 Mallow Technologies Private Limited. All Rights Reserved.</small>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </div>
+</section>
